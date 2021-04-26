@@ -84,9 +84,7 @@ def plot_quadratic():
 
     X4 = np.c_[np.ones(1000), xs, xs2, xs3, xs4]
     A4 = np.linalg.inv(X4.T @ X4) @ X4.T @ distributed
-    y_pred = A4[0] + A4[1]*x_line + A4[2] * \
-        np.square(x_line) + A4[3]*np.power(x_line, 3) + \
-        A4[4]*np.power(x_line, 4)
+    
     plt.plot(x_line, y_pred, color="purple")
 
     quad.figure.savefig('scatterplot-quadratic.pdf')
